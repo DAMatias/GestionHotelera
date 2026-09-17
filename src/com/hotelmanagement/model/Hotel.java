@@ -12,6 +12,7 @@ public class Hotel {
     private List<Room> rooms;
     private Set<Employee> employees;
     private List<Rating> ratings;
+    private static int amountHotels = 0;
 
     public Hotel(String name, String address) {
         this.name = name;
@@ -19,6 +20,7 @@ public class Hotel {
         this.rooms = new ArrayList<>();
         this.ratings = new ArrayList<>();
         this.employees = new HashSet<>();
+        amountHotels ++;
     }
 
     // ===== GETTERS Y SETTERS =====
@@ -34,6 +36,7 @@ public class Hotel {
     public void setEmployees(Set<Employee> employees) { this.employees = employees; }
     public List<Rating> getRatings() { return ratings; }
     public void setRatings(List<Rating> ratings) { this.ratings = ratings; }
+    public static int getAmountHotels() { return amountHotels; }
 
     // ===== MÉTODOS ADICIONALES =====
     public void addRoom(Room room) { this.rooms.add(room); }

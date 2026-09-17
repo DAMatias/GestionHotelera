@@ -59,6 +59,12 @@ public class Main {
         System.out.println("Habitación 202 (DOBLE): $" + room202.calculateTotalPrice(days) + " (5% descuento)");
         System.out.println("Habitación 303 (SUITE): $" + room303.calculateTotalPrice(days) + " (10% descuento)");
         System.out.println();
+        
+        // MUESTA DE HOTELES DE LA CADENA
+        System.out.println("--- Hoteles pertenecientes a la cadena ---");
+        int numberHotels = Hotel.getAmountHotels();
+        System.out.println("La cadena posee un total de " + numberHotels + " hoteles.");
+        System.out.println();
 
         // 5. AGREGACIÓN: Creamos empleados y los asociamos al hotel
         System.out.println("--- Contratando empleados (Agregación) ---");
@@ -135,6 +141,7 @@ public class Main {
         myHotel.addRating(new Rating(5, "Excelente servicio", new Date()));
         myHotel.addRating(new Rating(3, "Regular", new Date()));
         System.out.println("Promedio de estrellas del hotel: " + myHotel.calculateAverageStars());
+        
 
         System.out.println("\n========================================");
         System.out.println("  FIN DE LA EJECUCIÓN DEL SISTEMA");
