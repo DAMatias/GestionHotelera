@@ -13,7 +13,11 @@ public class Main {
         System.out.println("========================================\n");
 
         // 1. Instanciar el Hotel
-        Hotel myHotel = new Hotel("Diaz Somma Resort", "Av. Siempre Viva 123");
+        /*Hotel myHotel = new Hotel("Diaz Somma Resort", "Av. Siempre Viva 123");*/
+        Hotel myHotel = Hotel.getInstancia();
+        Hotel yourHotel = Hotel.getInstancia();
+        System.out.println(yourHotel.getName());
+        System.out.println(myHotel == yourHotel); 
         System.out.println("Hotel creado: " + myHotel.getName());
         System.out.println("Dirección: " + myHotel.getAddress() + "\n");
 
@@ -61,10 +65,10 @@ public class Main {
         System.out.println();
         
         // MUESTA DE HOTELES DE LA CADENA
-        System.out.println("--- Hoteles pertenecientes a la cadena ---");
+        /*System.out.println("--- Hoteles pertenecientes a la cadena ---");
         int numberHotels = Hotel.getAmountHotels();
         System.out.println("La cadena posee un total de " + numberHotels + " hoteles.");
-        System.out.println();
+        System.out.println();*/
 
         // 5. AGREGACIÓN: Creamos empleados y los asociamos al hotel
         System.out.println("--- Contratando empleados (Agregación) ---");

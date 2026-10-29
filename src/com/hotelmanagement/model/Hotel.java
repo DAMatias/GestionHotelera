@@ -12,16 +12,24 @@ public class Hotel {
     private List<Room> rooms;
     private Set<Employee> employees;
     private List<Rating> ratings;
-    private static int amountHotels = 0;
-
-    public Hotel(String name, String address) {
+    // private static int amountHotels = 0;
+    private static Hotel instancia;
+    
+    private Hotel(String name, String address) {
+    	this.name = name;
+    	this.address = address;
+        this.rooms = new ArrayList<>();
+        this.ratings = new ArrayList<>();
+        this.employees = new HashSet<>();
+    }
+    /*public Hotel(String name, String address) {
         this.name = name;
         this.address = address;
         this.rooms = new ArrayList<>();
         this.ratings = new ArrayList<>();
         this.employees = new HashSet<>();
         amountHotels ++;
-    }
+    }*/
 
     // ===== GETTERS Y SETTERS =====
     public String getName() { return name; }
@@ -36,7 +44,14 @@ public class Hotel {
     public void setEmployees(Set<Employee> employees) { this.employees = employees; }
     public List<Rating> getRatings() { return ratings; }
     public void setRatings(List<Rating> ratings) { this.ratings = ratings; }
-    public static int getAmountHotels() { return amountHotels; }
+    // public static int getAmountHotels() { return amountHotels; }
+    
+    public static Hotel getInstancia() {
+    	if(instancia == null) {
+    		instancia = new Hotel("Diaz Somma Resort", "Av. Siempre Viva 123");
+    	}
+    	return instancia;
+    }
 
     // ===== MÉTODOS ADICIONALES =====
     public void addRoom(Room room) { this.rooms.add(room); }

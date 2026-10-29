@@ -1,6 +1,6 @@
 package com.hotelmanagement.model;
 import java.util.Date;
 
-public interface ICalculateAge {
+public abstract interface ICalculateAge {
     int calculateAge(Date birthDate);
 }
